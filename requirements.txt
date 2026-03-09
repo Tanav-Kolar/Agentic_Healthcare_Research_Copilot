@@ -1,4 +1,31 @@
-setuptools
-pandas
+# ── Core Framework ──
+crewai[tools]
+fastapi
+uvicorn[standard]
+
+# ── LLM & Embeddings ──
+sentence-transformers
+torch
+
+# ── Vector Store ──
+qdrant-client
+
+# ── Data & Validation ──
+pydantic
+pydantic-settings
+
+# ── HTTP Client (PubMed E-utilities) ──
+httpx
+
+# ── PDF/CSV Export ──
+reportlab
+python-csv
+
+# ── Utilities ──
+python-dotenv
 numpy
-scikit-learn
+pandas
+
+# ── Testing ──
+pytest
+pytest-asyncio

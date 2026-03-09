@@ -209,3 +209,7 @@ __marimo__/
 
 #dirs
 /assignment/
+/rag/
+/api/
+/tests/
+/agents/
