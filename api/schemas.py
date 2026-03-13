@@ -37,12 +37,9 @@ class AskRequest(BaseModel):
 
 class Quote(BaseModel):
     """A direct quote from a source article."""
-    id: str = Field(..., alias="article")
+    id: str
     pmid: Optional[str] = None
     quote: str
-
-    class Config:
-        populate_by_name = True
 
 
 class EvidenceItem(BaseModel):

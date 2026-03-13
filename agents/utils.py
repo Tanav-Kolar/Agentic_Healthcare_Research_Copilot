@@ -70,7 +70,13 @@ def parse_synthesis(raw_output: str) -> dict:
     text = _strip_markdown(raw_output)
 
     try:
-        return json.loads(text)
+        data = json.loads(text)
+        # Normalize quotes: local LLMs often output 'article' instead of 'id'
+        if "quotes" in data and isinstance(data["quotes"], list):
+            for q in data["quotes"]:
+                if isinstance(q, dict) and "article" in q and "id" not in q:
+                    q["id"] = q["article"]
+        return data
     except json.JSONDecodeError as e:
         logger.warning("Failed to parse synthesis output as JSON: %s", e)
         return {
