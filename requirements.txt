@@ -3,6 +3,7 @@ crewai
 crewai-tools
 fastapi
 uvicorn
+streamlit
 
 # LLM & Embeddings
 ollama
