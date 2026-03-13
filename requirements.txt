@@ -1,31 +1,35 @@
-# ── Core Framework ──
-crewai[tools]
+# Core Framework
+crewai
+crewai-tools
 fastapi
-uvicorn[standard]
+uvicorn
 
-# ── LLM & Embeddings ──
+# LLM & Embeddings
+ollama
 sentence-transformers
 torch
 
-# ── Vector Store ──
+# Vector Store
 qdrant-client
 
-# ── Data & Validation ──
+# Data & Validation
 pydantic
 pydantic-settings
 
-# ── HTTP Client (PubMed E-utilities) ──
+# HTTP Client (PubMed E-utilities)
 httpx
 
-# ── PDF/CSV Export ──
-reportlab
-python-csv
+# XML parsing (PubMed EFetch responses)
+lxml
 
-# ── Utilities ──
+# PDF/CSV Export
+reportlab
+
+# Utilities
 python-dotenv
 numpy
 pandas
 
-# ── Testing ──
+# Testing
 pytest
 pytest-asyncio
